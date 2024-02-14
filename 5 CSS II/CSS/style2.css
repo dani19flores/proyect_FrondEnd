@@ -1,0 +1,84 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #999;
+    font-size: 14px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+/* 
+    static va permitir que los elementos sigan el flujo del orden normal, es el valor por defecto que tienen los HTML 
+    absolute va a posicionar los elementos en relación a sus elementos padres, se comportara como si no estuviera en el mismo documento.
+    relative va permanecer en el flujo normal de todos los elementos y también puede afectar su posición y también va afectar a absolute
+*/
+.modal{
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute; 
+    top: 15%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    /* sombras  */
+    box-shadow: 5px 5px 20px 10px #333;
+}
+
+.modal i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal button{
+    width: 200px;
+    text-align: center;
+    border: 1px solid #073636;
+    background-color: #073636;
+    color: #fff;
+    cursor: pointer;
+    /* para dar un efecto al botón y no se vea muy abrupta*/
+    transition: all .25s ease-in-out;
+}
+
+.modal button:hover{
+    background-color: #fff;
+    color: #073636;
+}
+
+/* en este caso como este es su padre se posiciona absolute en el primer relative*/
+.container{
+    width: 80%;
+    height: 400px;
+    background-color: beige;
+    left: 20px;
+    background-image: url("https://siroccolandscapes.ca/wp-content/uploads/2021/03/Website-header-2048x1363.jpg");
+    background-repeat: no-repeat;
+    /*con cover va a cubrir el espacio del contenedor pero se va a cortar
+    contain va a poner la imagen completa pero puede dejar espacios*/
+    background-size: contain;
+    background-position: 50% 50%;
+}
+/* 
+    fixed ayuda a acompañarte aunque siga dando scroll 
+    z-index le dice al navegador que tan profundo queremos nuestros elementos 
+*/
+header{
+    width: 100%;
+    background-color: darkgreen;
+    color: #fff;
+    position: fixed;
+    z-index: 10;
+}
+
+header p{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px 0;
+}

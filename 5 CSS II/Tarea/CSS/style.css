@@ -1,0 +1,189 @@
+* {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.grid-container-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    gap: 10px;
+    grid-template-areas: 
+        "navigation logo-position"
+    ;
+
+    background-image: url("https://siroccolandscapes.ca/wp-content/uploads/2021/03/Website-header-2048x1363.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 80% 50%;
+}
+
+.grid-container-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    margin: 40px;
+    gap: 30px;
+    grid-template-areas: 
+        "img-1 img-2 img-3"
+    ;
+}
+
+header .logo{
+    width: 200px;
+    height: auto;
+    float: right;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+}
+
+a {
+    color: #158862;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px dotted #419582;
+}
+
+input[type="submit"]:hover{
+    background-color: #d7d5d5;
+}
+
+input[type="submit"]{
+    color: #000000;
+    background-color: #595998;
+    border-radius: 50%;
+    height: 50px;
+    width: 80px;
+}
+
+img{
+    width: 100%;
+}
+
+.backGroundImg{
+    position: absolute;
+    left: 700px;
+    top: 0px;
+    z-index: -1;
+    width: 100px;
+    height: auto;
+}
+
+.contenedor{
+    display: inline-block;
+    margin: auto auto;
+}
+
+.centrado{
+    text-align: center;
+}
+
+header div h1 .consulta{
+    color: #000000;
+    border: none;
+}
+
+.comment{
+    width: 400px;
+    height: 100px;
+}
+
+.info{
+    color: #000000;
+    border: none;
+}
+
+h2, h3, p{
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+a[href^='mailto']::before {
+    content: '📧 ';
+}
+
+a[href^='tel']::before {
+    content: '📞 ';
+}
+
+a:link{
+    color: #ff0000;
+}
+
+body {
+    background: #ebebe6;
+}
+
+.modal{
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute; 
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: 10px 10px 30px 20px #333;
+}
+
+.modal i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal button{
+    width: 200px;
+    text-align: center;
+    border: 2px solid #0f0f0f;
+    background-color: #073636;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow: 2px 2px 7px 4px #333;
+    transition: all .25s ease-in-out;
+}
+
+.modal button:hover{
+    background-color: #fff;
+    color: #073636;
+}
+
+.flex-container{
+    width: 128px;
+    height: auto;
+    background-color: #2297b8;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+}
+
+.casilla{
+    text-align: center; 
+    font-size: 1em;
+    padding: 1em;
+    color: lightgray;
+}
+
+.B1{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.B2{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}

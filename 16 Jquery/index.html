@@ -1,0 +1,151 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous"></script>
+    <title>jQuery</title>
+</head>
+<body>
+    <header>
+    <i>
+        <img src="img/menu.svg" />
+    </i>
+        <img src="img/logo.svg" class="logo"/>
+    <i>
+        <span class="notify-badge">2</span>
+        <img src="img/cart.svg" />
+    </i>
+    </header>
+    <main>
+        <article class="products logo">
+            <section class="mouse">
+                <img src="img/mexico.webp" />
+                <h2 id="txt">Jersey México 2022</h2>
+                <p>$1,799.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section class="promo">
+                <img src="img/chamarra.webp" />
+                <h2>Chamarra Adidas Spezial</h2>
+                <p>$3,000.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/arsenal.webp" />
+                <h2>Jersey AC Milan 2022</h2>
+                <p>$1,799.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/chamarra-c.webp" />
+                <h2>Chamarra Adidas</h2>
+                <p>$1,259.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section class="promo">
+                <img src="img/tennis.webp" />
+                <h2>Adidas LG2 SPZ</h2>
+                <p>$3,489.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section class="promo">
+                <img src="img/mexico.webp" />
+                <h2>Jersey México 2022</h2>
+                <p>$1,799.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/chamarra.webp" />
+                <h2>Chamarra Adidas Spezial</h2>
+                <p>$3,000.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/arsenal.webp" />
+                <h2>Jersey AC Milan 2022</h2>
+                <p>$1,799.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/chamarra-c.webp" />
+                <h2>Chamarra Adidas</h2>
+                <p>$1,259.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+            <section>
+                <img src="img/tennis.webp" />
+                <h2>Adidas LG2 SPZ</h2>
+                <p>$3,489.00</p>
+                <img src="img/add.svg" class="addProduct"/>
+            </section>
+        </article>
+
+        <article class="cart">
+            <h2>CARRITO</h2>
+            <section>
+                <img src="img/milan.webp" />
+                <h3>Jersey AC Milan 2022</h3>
+                <p>$1,799.00</p>
+                <i class="remove"><img src="img/remove.svg" /></i>
+            </section>
+            <section>
+                <img src="img/chamarra-c.webp" />
+                <h3>Adidas LG2 SPZ</h3>
+                <p>$3,489.00</p>
+                <i class="remove"><img src="img/remove.svg" /></i>
+            </section>
+            <button class="toggle">COMPRAR</button>
+        </article>
+
+        <article class="menu">
+            <i class="close"><img src="img/X.svg" alt="close"></i>
+            <h2>MENU</h2>
+            <section>
+                <a href="#" class=""><span><i><img src="img/home.svg" class="icono" /></i></span>Home</a>
+            </section>
+            <section>
+                <a href="#"><span><i><img src="img/shirt.svg" class="icono" /></i></span>T-Shirt</a>
+            </section>
+            <section>
+                <a href="#"><span><i><img src="img/shoes.svg"  class="icono" ></i></span>Shoes</a>
+            </section>
+            <section>
+                <a href="#"><span><i><img src="img/accessories.svg"  class="icono" ></i></span>Accessories</a>
+            </section>
+            <section>
+                <a href="#"><span><i><img src="img/sweater.svg"  class="icono" ></i></span>Sweater</a>
+            </section>
+            <section>
+                <a href="#"><span><i><img src="img/jacket.svg"  class="icono" ></i></span>jacket</a>
+            </section>
+        </article>
+
+        <article class="form">
+            <h2 class="title-sc">CONTACTO</h2>
+            <form action="">
+                <input type="text" placeholder="Nombre" value="persona">
+                <input type="text" placeholder="No. orden">
+                <input type="button" placeholder="Enviar">
+            </form>
+        </article>
+    </main>
+</body>
+</html>

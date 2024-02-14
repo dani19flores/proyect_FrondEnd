@@ -1,0 +1,49 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+        crossorigin="anonymous"></script>
+        <!-- html to build the main structure -->
+        <script src="js/index.js" defer></script>
+        <script src="js/menu.js" defer></script>
+        <script src="js/products.js"></script>
+        <script src="js/shoppingCart.js" defer></script>
+        <script src="js/contact.js" defer></script>
+        <title>Cart</title>
+    </head>
+    <body>
+        <header>
+        <i>
+            <img src="img/Icon/menu.svg" />
+        </i>
+            <img src="img/Icon/logo.svg" class="logo"/>
+        <i>
+            <span class="notify-badge">2</span>
+            <img src="img/Icon/cart.svg" />
+        </i>
+        </header>
+        <main>
+            <article class="products logo" id="productsContainer"></article>
+            <article class="cart" id="cartContainer"></article>
+            <article class="menu" id="menuContainer"></article>
+            <article class="form" id="contactContainer"></article>
+        </main>
+    </body>
+</html>

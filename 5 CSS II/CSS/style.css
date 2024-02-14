@@ -1,0 +1,38 @@
+
+/* Unidades CSS */
+/* 
+    toma la medida de pixeles "px" en la pantalla pero con el % es mejor porque toma un tamaño de la pantalla asi si lo minimizas se acopla a la pantalla
+    Unidad em es relativo a su padre directo siendo main en este caso
+    los rem son directo al font size del html
+
+    los em y rem se usan para font size
+    para with se usan % a veces usamos cuadros que nunca se muevan seria fijo 300px por ejemplo
+    los px se usan para bordes, margenes, paddings
+*/
+
+html{
+    font-size: 20px;
+}
+
+main{
+    width: 90%;
+    background-color: rgb(216, 235, 251);
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.container-a{
+    width: 45%;
+    background-color: rgb(51, 214, 214);
+    border: 2px solid blue;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.container-b{
+    width: 49%;
+    background-color: rgb(51, 214, 89);
+    display: inline-block;
+    font-size: 1rem;
+}

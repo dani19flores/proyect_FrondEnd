@@ -1,0 +1,37 @@
+/* Box Model 
+margin: 
+solo se va usar cuando se quieren separar elementos, o cuando queremos centrar algún elemento o mover un elemento a una dirección,  
+border
+padding: 
+cuando no quieres que el contenido no toque el border del contenedor, cuando quieres aumentar el tamaño del elemento sin que el contenido sea más grande
+content
+*/
+
+header{
+    padding: 20px 40px;/*padding: 0 0 0 0 Arriba Derecha Abajo Izquierda   padding: 0 0 arriba/derecha abajo/izquierda*/
+    border: 10px solid #e00a0a;/* border 0 0 0 0  Ancho, Tipo de border, color */
+    border-bottom: 2px dotted #161313;
+}
+
+header .logo{
+    width: 200px;
+    height: 200px;
+}
+    
+header nav{
+    display: inline-block;/*nos permite modificar el tipo de elemento, es algo crucial para los layout de sitios web*/
+    float: right;
+    margin-top: 45px; 
+}
+
+header nav a{
+    margin: 0 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+/* 
+se componen box model
+areas internas y externas
+ */

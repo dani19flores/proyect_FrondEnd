@@ -1,0 +1,31 @@
+/* 
+    Flexbox
+    el contexto se usa con la propiedad display
+    Flex es para estructurar, ayuda a eliminar algunas veces bloque o en linea, 
+*/
+.flex-container{
+    display: flex;
+    width: 55%;
+    padding: 20px;/* es el contorno total*/
+    background-color: beige;
+    /*flex-direction: row;*//*nos ayuda la direction de nuestro eje principal */
+    /* flex-wrap: wrap;para que no se desborde */
+    margin: 0 auto;/* el margen ayuda a acomodar en que posición*/
+    /* justify-content: space-evenly;se justifica el contenido en el contenedor dependiendo que configuración */
+    height: 400px;
+    align-items: flex-start;/* alinea el contenido */
+    align-content: flex-start;
+    gap: 10px 10px;/*controla los espacio entre los items*/
+}
+
+.flex-container div{
+    background-color: burlywood;
+    flex-basis: 100px;/* es recomendado usar esto en vez de width porque maneje ambos */
+    /* width: 150px; */
+    /* flex-grow: 1;/* que tanto puede crecer un items */
+    /* flex-shrink: 1; */
+}
+
+.flex-container div.flex-item{
+    /* flex-shrink: 3; */
+}

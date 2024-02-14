@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+header {
+    padding: 10px;
+    background-color: rgb(228, 252, 236);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+}
+
+header nav {
+    width:  281px;
+    display: flex;
+    gap: 10px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: lightslategray;
+    font-size: 16px;
+}
+
+.cards {
+    background-color: rgb(255, 255, 235);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+    gap: 10px;
+}
+
+.card {
+    background-color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 10px;
+    background-color: rgb(235, 248, 255);
+}
+/* em es proportcional al font size */
+@media screen and (max-with: 50em) {
+    main {
+        /*display: grid;
+        grid-template-columns: 1fr;*/
+        flex-direction: column;
+    }
+
+    main article, main aside {
+        flex: 1;
+    }
+}

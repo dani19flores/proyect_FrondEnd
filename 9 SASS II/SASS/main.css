@@ -1,0 +1,147 @@
+footer article > a, footer article nav a, header nav a {
+  text-decoration: none;
+  color: rgb(218, 215, 215);
+}
+
+.secundary-button, .main-button {
+  display: block;
+  border: none;
+  border-radius: 30px;
+  color: rgb(218, 215, 215);
+  text-align: center;
+  padding: 15px 0;
+  width: 50%;
+  font-weight: 600;
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body, html, p, a {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(37, 37, 37);
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+header img {
+  width: 120px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 70rem) {
+  header nav {
+    display: none;
+  }
+}
+header nav a {
+  font-weight: 500;
+  font-size: 1rem;
+}
+header article {
+  display: flex;
+  justify-content: space-between;
+}
+header article .header__icon {
+  color: rgb(218, 215, 215);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 10px;
+}
+header article .header__icon:hover {
+  transform: scale(1.1);
+}
+header article .header__icon:last-child {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+}
+header article i:last-child {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+footer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(7, 72, 7);
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 48rem) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+footer article img {
+  width: 80px;
+}
+footer article nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 60rem) {
+  footer article nav {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 48rem) {
+  footer article nav {
+    flex-direction: column;
+  }
+}
+footer article > a {
+  display: block;
+}
+
+.main-button {
+  background-color: chartreuse;
+}
+
+.secundary-button {
+  background-color: dimgray;
+}
+
+main article {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px yellow;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: blue;
+}
+main article:first-child {
+  box-shadow: 0px 0px 10px green;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: red;
+}
+main article.mixin {
+  box-shadow: 0px 0px 10px rgb(144, 199, 255);
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(7, 72, 7);
+}
+main article.three {
+  box-shadow: 0px 0px 10px rgb(0, 9, 128);
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(204, 0, 255);
+}/*# sourceMappingURL=main.css.map */

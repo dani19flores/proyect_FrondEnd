@@ -1,0 +1,11 @@
+.custom-background {
+    background-color: #bad3c0;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    fill: black;
+    background-color: black;
+}

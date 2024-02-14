@@ -1,0 +1,66 @@
+$main-color: rgb(7, 72, 7);
+$fontFamily: "Poppins",Arial, Helvetica, sans-serif;
+$White: rgb(218, 215, 215);
+$gray: rgb(37,37,37);
+
+//function
+@function divideUnits($value, $quantity){
+    $result: $value/$quantity;
+    @return $result;
+}
+
+@mixin avatar($size, $type){
+    width: $size;
+    height: $size;
+    background-color: blue;
+
+    @if($type == circle){
+        border-radius: 50%;
+    } @else {
+        border-radius: 10px;
+    }
+
+}
+
+//son como variables de bloques completos de css, 
+//se usa para funcionalidades a lo largo de la aplicación
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin shadowContainer($blur, $shadowColor, $bgColor){
+    box-shadow: 0px 0px $blur $shadowColor;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: $bgColor;
+}
+
+@mixin laptops {
+    @media screen and (max-width: 70rem) { @content }
+}
+
+@mixin tablets {
+    @media screen and (max-width: 60rem) { @content }
+}
+
+@mixin phones {
+    @media screen and (max-width: 48rem) { @content }
+}
+
+//solo pueden ser utilizadas cuando se extienden sus propiedades
+%link{
+    text-decoration: none;
+    color: $White;
+}
+
+%button{
+    display: block;
+    border: none;
+    border-radius: 30px;
+    color: $White;
+    text-align: center;
+    padding: 15px 0;
+    width: divideUnits(100%,2);
+    font-weight: 600;
+}

@@ -1,0 +1,96 @@
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*border box es para sirve para adaptarse a la pantalla*/
+.main-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.7rem;
+    box-sizing: border-box;
+}
+/*vw : view with */
+.title {
+    width: 100%;
+    font-size: clamp(2rem,5vw, 3rem);
+}
+
+/* .text-main{
+    width: 100%;
+    font-size: 1.1rem;
+} */
+
+.main-container h2{
+    width: 100%;
+    font-size: 1rem;
+}
+
+.main-container p:last-child{
+    width: 100%;
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+button {
+    width: 300px;
+    border: 1px solid burlywood;
+    background-color: burlywood;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: block;
+    transition: all .25s linear;
+}
+
+
+/*@media screen and (max-width : 50em){
+    .main-container {
+        width: 100%;
+        background-color: aquamarine;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .text-main, .main-container, h2{
+        font-size: 14px;
+    }
+
+    .main-container p:last-child{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}*/
+
+@media screen and (max-width : 50em){
+    html{
+        font-size: 14px;
+        .main-container img {
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width : 35em){
+    html{
+        font-size: 12px;
+    }
+} 
+
+@media (hover:hover){
+    button:hover{
+        background-color: #fff;
+        color: burlywood;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #333;
+        color: #fff;
+    }
+}
+

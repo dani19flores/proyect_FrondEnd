@@ -1,0 +1,44 @@
+$fontFamily: "Montserrat", Arial, Helvetica, sans-serif;
+$black: #000000;
+$soft_black: #171616;
+$Gray: #5e5e5e;
+$White: #fff; 
+
+@mixin shadowContainer($blur, $shadowColor, $bgColor){
+    box-shadow: 0px 0px $blur $shadowColor;
+    padding: 1px;
+    border-radius: 5px;
+    background-color: $bgColor;
+}
+
+@mixin flexbox{
+    display: flex;
+    align-items: center;
+}
+
+@mixin padding{
+    padding: 10px;
+}
+
+@mixin laptops {
+    @media screen and (max-width: 70rem) { @content }
+}
+
+@mixin tablets {
+    @media screen and (max-width: 60rem) { @content }
+}
+
+@mixin phones {
+    @media screen and (max-width: 48rem) { @content }
+}
+
+%link{
+    text-decoration: none;
+    @include padding;
+    color: $White;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}

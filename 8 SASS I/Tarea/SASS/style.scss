@@ -1,0 +1,201 @@
+$fontFamily: "Montserrat", Arial, Helvetica, sans-serif;
+$black: #000000;
+$White: #fff; 
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin padding{
+    padding: 10px;
+}
+
+%link{
+    text-decoration: none;
+    @include padding;
+    color: $White;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .logo{
+        width: 100%;
+        background-color: $black;
+        @include padding;
+        display: flex;
+
+        .menu{
+            color: $White;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+
+        h1{
+            @include padding;
+            color: $White;
+            font-weight: bold;
+            @include flexbox;
+            gap: 10px;
+        }
+    }
+
+    .search{
+        position: relative;
+        width: 100%;
+
+        input{
+            padding-left: 30px;
+            width: 100%;
+            border: 2px solid #4c6e86;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus{
+            border-color: #ff5733;
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-40%);
+            color: #888;
+            cursor: pointer;
+        }
+    }
+
+    aside{
+        width: 20%;
+        height: 100vh;
+        background-color: $black;
+        @include padding;
+
+        .menu{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                color: $White;
+                @include padding;
+            }
+
+            a{
+                @extend %link;
+            }
+
+            a:hover{
+                background-color: #232121;
+            }
+        }
+    }
+
+    .playlist{
+        background-color: $black;
+        @include padding;
+        width: 100%;
+        @include flexbox;
+        flex-direction: row;
+
+        h2{
+            @include padding;
+            color: $White;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plus{
+            color: $White;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+    }
+
+    .songs{
+        background-color: $black;
+        @include padding;
+        width: 100%;
+        @include flexbox;
+        flex-direction: column;
+
+        .song{
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            color: $White;
+            @include padding;
+            grid-column-gap: 10px;
+            width: 300px;
+
+            p{
+                justify-self: center;   
+            }
+
+            .disc{
+                justify-self: start;
+            }
+
+            .trash{
+                justify-self: end;
+            }
+
+        }
+    }
+
+    .line{
+        height: 2px;
+        background-color: $White;
+        width: 100%;
+    }
+
+    .audio{
+        margin: 10px;
+        color: $White;
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+
+        i{
+            font-size: 50px;
+        }
+    }
+
+    .volume-control {
+        width: 200px;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        color: $White;
+        gap: 10px;
+
+        .volume-slider {
+            width: 100%;
+        }
+    }
+    
+    
+}
