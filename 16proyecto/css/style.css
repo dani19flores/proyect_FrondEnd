@@ -1,3 +1,14 @@
+.home {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+}
+
 .products {
   width: 100%;
   display: flex;
@@ -166,7 +177,6 @@ main {
   height: 100%;
   box-shadow: 19px -1px 22px 15px rgba(0, 0, 0, 0.29);
   transition: all 0.25s ease;
-  border-radius: 0 20% 20% 0;
 }
 .menu.show {
   visibility: visible;
