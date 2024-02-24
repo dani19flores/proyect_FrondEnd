@@ -1,7 +1,0 @@
-.music_box{
-    :hover{
-        &:first-child{
-            @include shadowContainer(10px,$White,$White);
-        }
-    }
-}
