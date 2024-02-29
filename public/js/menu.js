@@ -1,84 +1,65 @@
-$(document).ready(function () {
-    $('#menuContainer').load('../menu.html', function () {
-        const closeIcon = $('#menuContainer .close');
-        closeIcon.on("click", function () {
-            $('#menuContainer').removeClass("show");
+document.addEventListener("DOMContentLoaded", function() {
+    cargarProductos('../home.html');
+    cargarMenu('../menu.html');
+    cargarShoppingCart('../shoppingCart.html');
+});
+
+function cargarPagina(pagina,current) { 
+    fetch(pagina).then(response => response.text()) .then(html => 
+    { 
+        document.getElementById('productsContainer').innerHTML = html; 
+
+        const addProducts = document.querySelectorAll(".addProduct");
+        if(addProducts.length > 0)
+        {
+            addProductToCart(addProducts,current);
+        }
+        const lessProducts = document.querySelectorAll(".lessProduct");
+        if(lessProducts.length > 0){
+            lessProductToCart(lessProducts, current);
+        }
+        currentMenu(current);
+        ShoppingCatalogMatch();
+    });
+}
+
+function cargarMenu(pagina){
+    fetch(pagina).then(response => response.text()) .then(html => 
+    { 
+        document.getElementById('menuContainer').innerHTML = html; 
+
+        const closeIcon = document.querySelector('#menuContainer .close');
+        closeIcon.addEventListener("click", () => {
+            const menuContainer = document.querySelector('#menuContainer');
+            menuContainer.classList.remove("show");
         });
 
         const home = document.querySelector(".homeMenu");
         home.addEventListener("click", () => {
-            $('#productsContainer').load('../home.html');
+            cargarPagina('../home.html','home');
         });
 
         const blouse = document.querySelector(".blouse");
         blouse.addEventListener("click", () => {
-            $('#productsContainer').load('../blouse.html', function () {
-                const addProducts = document.querySelectorAll(".addProduct");
-                if(addProducts.length > 0)
-                {
-                    addProductToCart(addProducts,"blouse");
-                }
-                const lessProducts = document.querySelectorAll(".lessProduct");
-                if(lessProducts.length > 0){
-                    lessProductToCart(lessProducts, "blouse");
-                }
-                currentMenu("blouse");
-                ShoppingCatalogMatch();
-            });
+            cargarPagina('../blouse.html','blouse');
         });
 
         const tShirt = document.querySelector(".Shirt");
         tShirt.addEventListener("click", () => {
-            $('#productsContainer').load('../t-shirt.html', function () {
-                const addProducts = document.querySelectorAll(".addProduct");
-                if(addProducts.length > 0)
-                {
-                    addProductToCart(addProducts,"shirt");
-                }
-                const lessProducts = document.querySelectorAll(".lessProduct");
-                if(lessProducts.length > 0){
-                    lessProductToCart(lessProducts, "shirt");
-                }
-                currentMenu("shirt");
-                ShoppingCatalogMatch();
-            });
+            cargarPagina('../t-shirt.html','shirt');
         });
 
         const shoes = document.querySelector(".shoes");
         shoes.addEventListener("click", () => {
-            $('#productsContainer').load('../shoes.html', function () {
-                const addProducts = document.querySelectorAll(".addProduct");
-                if(addProducts.length > 0)
-                {
-                    addProductToCart(addProducts,"shoes");
-                }
-                const lessProducts = document.querySelectorAll(".lessProduct");
-                if(lessProducts.length > 0){
-                    lessProductToCart(lessProducts, "shoes");
-                }
-                currentMenu("shoes");
-                ShoppingCatalogMatch();
-            });
+            cargarPagina('../shoes.html','shoes');
         });
 
         const accessories = document.querySelector(".accessories");
         accessories.addEventListener("click", () => {
-            $('#productsContainer').load('../accessories.html', function () {
-                const addProducts = document.querySelectorAll(".addProduct");
-                if(addProducts.length > 0)
-                {
-                    addProductToCart(addProducts,"accessories");
-                }
-                const lessProducts = document.querySelectorAll(".lessProduct");
-                if(lessProducts.length > 0){
-                    lessProductToCart(lessProducts, "accessories");
-                }
-                currentMenu("accessories");
-                ShoppingCatalogMatch();
-            });
+            cargarPagina('../accessories.html','accessories');
         });
     });
-});
+}
 
 function updateLocalStorageShoppingCart() {
     const cartUpdate = document.querySelector(".cart");
@@ -100,11 +81,7 @@ function updateLocalStorageShoppingCart() {
 }
 
 function updateLocalStorageQuantityProducts(quantityProduct,productKey){
-    /*if(quantityProduct = "0"){
-        localStorage.removeItem(productKey);
-    } else {*/
-        localStorage.setItem(productKey, quantityProduct);
-    //}
+    localStorage.setItem(productKey, quantityProduct);
 }
 
 function currentMenu(menu){
@@ -170,7 +147,6 @@ function addProductToCart(addProducts,productType){
 
 function lessProductToCart(addProducts,productType){
     const buyButton = document.querySelector(".cart button.toggle");
-
     addProducts.forEach(addProduct => {
         addProduct.addEventListener("click", () => {
             
@@ -214,11 +190,6 @@ function lessProductToCart(addProducts,productType){
     });
 }
 
-window.addEventListener('load', () => {
-    ShoppingCart();
-});
-
-
 function ShoppingCatalogMatch(){  
     const currentMenu = localStorage.getItem("currentMenu"); 
     if (currentMenu) {
@@ -252,12 +223,11 @@ function ShoppingCart(){
         sectionsData.forEach(data => {
             const cartItem = document.createElement("section");
             cartItem.innerHTML = `
-                <img src=${data.imgProduct}/>
+                <img src="${data.imgProduct}"/>
                 <h3>${data.productName}</h3>
                 <p>${data.productPrice}</p>
                 <input type="text" name="name" value=${data.input_txt}>
                 <i class="remove"><img src="img/Icon/remove.svg" /></i>`;
-                console.log(cartItem.innerHTML)
             cart.insertBefore(cartItem,buyButton);
         });      
 
@@ -274,3 +244,24 @@ function ShoppingCart(){
     }
 }
 
+function cargarShoppingCart(pagina) { 
+    fetch(pagina) .then(response => response.text()) .then(html => 
+    { 
+        document.getElementById('cartContainer').innerHTML = html; 
+
+        const button = document.getElementsByTagName("button");
+        button[0].innerText = "BUY";
+        const elemButton = button[0];
+        elemButton.addEventListener('click', () => {
+            elemButton.classList.toggle("toggle");
+        });
+        ShoppingCart();
+    }); 
+}
+
+function cargarProductos(pagina){
+    fetch(pagina) .then(response => response.text()) .then(html => 
+    { 
+        document.getElementById('productsContainer').innerHTML = html; 
+    });
+}
