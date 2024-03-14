@@ -35,31 +35,34 @@
 
         .quantity {
             padding-top: 20px;
+        }
 
-            .addProduct, .lessProduct, .quantityInput, input{
-                width: 30px; 
-                display: inline-block; 
-                margin: 0;
-            }
+        .quantity .addProduct, 
+        .quantity .lessProduct, 
+        .quantity .quantityInput, 
+        .quantity input{
+            width: 30px; 
+            display: inline-block; 
+            margin: 0;
+        }
 
-            button[class*=btn] {
-                width: 40px;
-                height: 40px;
-                background-color: #E1E8EE;
-                border-radius: 6px;
-                border: none;
-                cursor: pointer;
-            }
-            
-            input{
-                border: none;
-                text-align: center;
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-                font-weight: 300;
-                vertical-align: top;
-            }
+        .quantity button[class*=btn] {
+            width: 40px;
+            height: 40px;
+            background-color: #E1E8EE;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .quantity input{
+            border: none;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            font-weight: 300;
+            vertical-align: top;
         }
         
         input:focus {
@@ -98,7 +101,6 @@
             }
         }
     }
-
 }
 
 header {
@@ -119,10 +121,10 @@ header {
     i {
         width: 40px;
         cursor: pointer;
-    
-        img {
-            width: 100%;
-        }
+    }
+
+    i img {
+        width: 100%;
     }
 }
 
@@ -192,11 +194,12 @@ main {
     i {
         width: 30px;
         cursor: pointer;
-
-        img {
-        width: 100%;
-        }
     }
+
+    i img {
+        width: 100%;
+    }
+
     }
 
     button {
@@ -246,24 +249,24 @@ main {
         padding: 25px 0px;
     }
 
-    section {
+    nav {
         padding-bottom: 20px;
         margin-top: 20px;
         border-bottom: 1px solid #f1f1f1;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
 
-        i {
-            width: 40px;
-            padding: 20px;
-        }
+    nav i {
+        width: 40px;
+        padding: 20px;
+    }
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    nav div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @media screen and (max-width: 768px) {
