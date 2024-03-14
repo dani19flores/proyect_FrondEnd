@@ -3,11 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
         cargarProductos('../home.html');
         cargarMenu('../menu.html');
         cargarShoppingCart('../shoppingCart.html');
+    } else {
+        navition('../login.html');
     }
 });
 
 function validateLogin(){
     return localStorage.getItem('currentLogin')!==!null;
+}
+
+function navition(destino) { 
+    window.location.href = destino;
 }
 
 function cargarPagina(pagina,current) { 

@@ -20,18 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
         let passwordValue = document.getElementById('password').value;
         console.log({usernameValue,passwordValue});
         if(usernameValue==="eflores" & passwordValue==="123456@"){
-            cargarPagina('../index.html','login');
+            currentLogin('login');
+            navition('../index.html');
         }
     });
 });
 
-function cargarPagina(pagina,current) { 
-    fetch(pagina).then(response => response.text()) .then(html => 
-    { 
-        currentMenu(current);
-    });
+function navition(destino) { 
+    window.location.href = destino;
 }
 
-function currentMenu(menu){
+function currentLogin(menu){
     localStorage.setItem("currentLogin", menu);
 }
