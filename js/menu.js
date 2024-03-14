@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function validateLogin(){
-    return localStorage.getItem('currentLogin')!==!null;
+    console(localStorage.getItem('currentLogin')!==null)
+    return localStorage.getItem('currentLogin')!==null;
 }
 
 function navition(destino) { 
