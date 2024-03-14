@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    cargarProductos('../home.html');
-    cargarMenu('../menu.html');
-    cargarShoppingCart('../shoppingCart.html');
+    if(validateLogin()){
+        cargarProductos('../home.html');
+        cargarMenu('../menu.html');
+        cargarShoppingCart('../shoppingCart.html');
+    }
 });
+
+function validateLogin(){
+    return localStorage.getItem('currentLogin')!==!null;
+}
 
 function cargarPagina(pagina,current) { 
     fetch(pagina).then(response => response.text()) .then(html => 
