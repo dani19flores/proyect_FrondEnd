@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
         cargarMenu('../menu.html');
         cargarShoppingCart('../shoppingCart.html');
     } else {
-        navition('../login.html');
+        navigation('../login.html');
     }
 });
 
 function validateLogin(){
-    console(localStorage.getItem('currentLogin')!==null)
+    console.log(localStorage.getItem('currentLogin')!==null)
     return localStorage.getItem('currentLogin')!==null;
 }
 
-function navition(destino) { 
+function navigation(destino) { 
     window.location.href = destino;
 }
 

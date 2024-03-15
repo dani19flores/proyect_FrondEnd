@@ -21,12 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log({usernameValue,passwordValue});
         if(usernameValue==="eflores" & passwordValue==="123456@"){
             currentLogin('login');
-            navition('../index.html');
+            navigation('../index.html');
         }
     });
 });
 
-function navition(destino) { 
+function navigation(destino) { 
     window.location.href = destino;
 }
 
