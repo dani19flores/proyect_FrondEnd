@@ -8,6 +8,27 @@ body {
     height: 100vh;
 }
 
+.error-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c0c02d;
+    color: black;
+    padding: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: none;
+    width: 100%;
+    &.showBar {
+        display: block;
+    }
+
+    &.error{
+        background-color: #ff3c00;
+    }
+}
+
+
 .login-logo{
     margin: 0 35% 0 35%;
     width: 80px;
