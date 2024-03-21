@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorBar.classList.add("showBar");
                 msg.textContent  = "por favor ingrese usuario y/o contraseña";
                 setTimeout(function() {
-                    errorBar.classList.remove("show");
+                    errorBar.classList.remove("showBar");
                 }, 5000);
             } else if(usernameValue==="eflores" & passwordValue==="123456@"){
                 errorBar.classList.add("showBar");
                 setTimeout(function() {
-                    errorBar.classList.remove("show");
+                    errorBar.classList.remove("showBar");
                 }, 5000);
                 currentLogin('login');
                 navigation('../index.html');
@@ -41,28 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-    const backToLogin = document.getElementById('backToLogin');
-    if(backToLogin){
-        backToLogin.addEventListener('click', function (event) {
-            navigation('../login.html');
-        });
-    }
-
-    const ForgotPassword = document.getElementById('ForgotPassword');
-    if(ForgotPassword){
-        ForgotPassword.addEventListener('click', function (event) {
-            navigation('../ForgotPassword.html');
-        });
-    }
-
-    const Register = document.getElementById('Register');
-    if(Register){
-        Register.addEventListener('click', function (event) {
-            navigation('../Register.html');
-        });
-    }
-
 });
 
 function navigation(destino) { 

@@ -39,6 +39,16 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1019607843);
   width: 300px;
 }
+.login-container .ForgotPassword, .login-container .backToLogin {
+  font-size: 1rem;
+  color: #555;
+  font-weight: normal;
+  text-decoration: none;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
 .login-container .icon-container {
   background-color: #14436c;
   border-radius: 10px;
@@ -97,19 +107,18 @@ body {
 .login-form input:focus {
   outline: none;
 }
-.login-form .backToLogin, .login-form .Register {
+.login-form a, .login-form .Register {
   font-size: 1rem;
   font-weight: bold;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
-.login-form .ForgotPassword {
-  margin-top: 10px;
-  font-size: 1rem;
-}
-.login-form .backToLogin:hover, .login-form .Register:hover, .login-form .ForgotPassword:hover {
+.login-form .Register:hover {
   color: inherit;
   background-color: inherit;
 }
-.login-form button {
+.login-form button, .login-form .Continue {
   margin-top: 50px;
   padding: 10px;
   background-color: #ececec;
@@ -119,7 +128,11 @@ body {
   cursor: pointer;
   font-size: 1.8rem;
 }
-.login-form button:hover {
+.login-form .Continue {
+  text-decoration: none;
+  font-weight: normal;
+}
+.login-form button:hover, .login-form .Continue:hover {
   color: #ffffff;
   background-color: #c2c2c2;
 }/*# sourceMappingURL=login.css.map */

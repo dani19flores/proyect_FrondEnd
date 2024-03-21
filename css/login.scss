@@ -41,6 +41,17 @@ body {
     box-shadow: 0 0 10px #0000001a;
     width: 300px;
 
+    .ForgotPassword, .backToLogin{
+        font-size: 1rem;
+        color: #555;
+        font-weight: normal;
+        text-decoration: none;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
     .icon-container{
         background-color: #14436c;
         border-radius: 10px;
@@ -106,23 +117,20 @@ body {
         outline: none;
     }
 
-    .backToLogin, .Register{
+    a, .Register{
         font-size: 1rem;
         font-weight: bold;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
     }
 
-    .ForgotPassword{
-        margin-top: 10px;
-        font-size: 1rem;
-        
-    }
-
-    .backToLogin:hover, .Register:hover, .ForgotPassword:hover{
+    .Register:hover{
         color: inherit;
         background-color: inherit;
     }
 
-    button {
+    button, .Continue {
         margin-top: 50px;
         padding: 10px;
         background-color: #ececec;
@@ -133,7 +141,12 @@ body {
         font-size: 1.8rem;
     }
 
-    button:hover {
+    .Continue{
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    button:hover, .Continue:hover {
         color: #ffffff;
         background-color: #c2c2c2;
     }
