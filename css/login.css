@@ -61,9 +61,25 @@ body {
   width: 30px;
 }
 
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 1%;
+}
+
+.RememberMe {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
+}
+.login-form .Register {
+  font-weight: bold;
+  color: #000000;
 }
 .login-form label {
   margin: 10px 0 10px 0;
@@ -80,6 +96,18 @@ body {
 }
 .login-form input:focus {
   outline: none;
+}
+.login-form .backToLogin, .login-form .Register {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.login-form .ForgotPassword {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.login-form .backToLogin:hover, .login-form .Register:hover, .login-form .ForgotPassword:hover {
+  color: inherit;
+  background-color: inherit;
 }
 .login-form button {
   margin-top: 50px;

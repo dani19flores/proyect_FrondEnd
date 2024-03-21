@@ -66,9 +66,26 @@ body {
     }
 }
 
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 1%;
+}
+
+.RememberMe{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
+
+    .Register{
+        font-weight: bold;
+        color: #000000;
+    }
 
     label {
         margin: 10px 0 10px 0;
@@ -87,6 +104,22 @@ body {
 
     input:focus {
         outline: none;
+    }
+
+    .backToLogin, .Register{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .ForgotPassword{
+        margin-top: 10px;
+        font-size: 1rem;
+        
+    }
+
+    .backToLogin:hover, .Register:hover, .ForgotPassword:hover{
+        color: inherit;
+        background-color: inherit;
     }
 
     button {
