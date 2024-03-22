@@ -29,10 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     errorBar.classList.remove("showBar");
                 }, 5000);
             } else if(usernameValue==="eflores" & passwordValue==="123456@"){
-                errorBar.classList.add("showBar");
-                setTimeout(function() {
-                    errorBar.classList.remove("showBar");
-                }, 5000);
                 currentLogin('login');
                 navigation('../index.html');
             } else {
