@@ -71,7 +71,17 @@ function cargarMenu(pagina){
         accessories.addEventListener("click", () => {
             cargarPagina('../accessories.html','accessories');
         });
+
+        const SignOut = document.querySelector(".SignOut");
+        accessories.addEventListener("click", () => {
+            navigation('../index.html');
+            localStorage.removeItem("currentLogin");
+        });
     });
+}
+
+function navigation(destino) { 
+    window.location.href = destino;
 }
 
 function updateLocalStorageShoppingCart() {
