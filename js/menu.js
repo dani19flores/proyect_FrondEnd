@@ -73,7 +73,7 @@ function cargarMenu(pagina){
         });
 
         const SignOut = document.querySelector(".SignOut");
-        accessories.addEventListener("click", () => {
+        SignOut.addEventListener("click", () => {
             navigation('../index.html');
             localStorage.removeItem("currentLogin");
         });

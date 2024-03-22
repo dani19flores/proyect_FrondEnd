@@ -13,6 +13,15 @@
   margin: 10px;
 }
 
+.homeMenu,
+.Shirt,
+.blouse,
+.shoes,
+.accessories,
+.SignOut {
+  cursor: pointer;
+}
+
 .products {
   width: 100%;
   display: flex;
